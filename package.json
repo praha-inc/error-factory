@@ -1,0 +1,69 @@
+{
+  "name": "@praha/error-factory",
+  "version": "0.0.0",
+  "description": "A simple utility for creating custom errors effortlessly",
+  "keywords": [
+    "javascript",
+    "typescript",
+    "error"
+  ],
+  "homepage": "https://github.com/praha-inc/error-factory/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/praha-inc/error-factory/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praha-inc/error-factory.git"
+  },
+  "license": "MIT",
+  "author": "PrAha inc.",
+  "type": "module",
+  "exports": {
+    "require": {
+      "types": "./dist/cjs/index.d.ts",
+      "default": "./dist/cjs/index.cjs"
+    },
+    "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "lint:code": "eslint .",
+    "lint:type": "tsc --noEmit",
+    "version": "changeset",
+    "version:apply": "changeset version",
+    "version:publish": "changeset publish",
+    "version:prepublish": "pkg-pr-new publish --pnpm --compact"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.12",
+    "@praha/eslint-config-common": "4.0.1",
+    "@praha/eslint-config-definer": "2.0.1",
+    "@praha/eslint-config-javascript": "3.0.1",
+    "@praha/eslint-config-style": "3.0.2",
+    "@praha/eslint-config-typescript": "3.0.2",
+    "@rslib/core": "0.4.1",
+    "@tsconfig/strictest": "2.0.5",
+    "eslint": "9.20.1",
+    "pkg-pr-new": "0.0.39",
+    "typescript": "5.7.3",
+    "vitest": "3.0.5"
+  },
+  "packageManager": "pnpm@10.3.0",
+  "publishConfig": {
+    "provenance": true
+  }
+}
