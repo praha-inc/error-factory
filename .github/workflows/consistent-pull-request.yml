@@ -1,0 +1,40 @@
+name: Consistent Pull Request
+
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize]
+
+jobs:
+  consistent-pull-request:
+    name: Consistent Pull Request
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Check pr label name
+        uses: praha-inc/action-restrict-pr-label@e3ca7d71dfd247a3bdeca4b0c94b0ee0ad26d240 # v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          rules: |
+            main <- feature/* [feature]
+            main <- bugfix/* [bugfix]
+            main <- refactor/* [refactor]
+            main <- chore/* [chore]
+            main <- deps/* [deps]
+
+      - name: Check head branch name
+        uses: praha-inc/action-restrict-head-branch@bb18968a8b5f4da9858a3d8982bcbf2488a537a5 # v1.0.0
+        with:
+          rules: |
+            feature/* bugfix/* refactor/* chore/* deps/*
+
+      - name: Check base branch name
+        uses: praha-inc/action-restrict-base-branch@bd001a050dba3fe3a5d607e8320135b31ccf94d2 # v1.0.2
+        with:
+          rules:
+            main <- feature/* bugfix/* refactor/* chore/* deps/*
