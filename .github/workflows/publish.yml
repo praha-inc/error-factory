@@ -26,7 +26,7 @@ jobs:
         run: pnpm run build
 
       - name: Create release pull request or publish to npm
-        uses: changesets/action@57dd5be9ba8852146913fabe3c122b219bb90fa2 # v1.4.9
+        uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
         with:
           publish: pnpm run version:publish
         env:
