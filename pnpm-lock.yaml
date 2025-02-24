@@ -30,8 +30,8 @@ importers:
         specifier: 3.0.2
         version: 3.0.2(@praha/eslint-config-common@4.0.1(eslint@9.20.1))(@praha/eslint-config-javascript@3.0.1(@praha/eslint-config-common@4.0.1(eslint@9.20.1))(@typescript-eslint/eslint-plugin@8.24.0(@typescript-eslint/parser@8.24.0(eslint@9.20.1)(typescript@5.7.3))(eslint@9.20.1)(typescript@5.7.3))(eslint@9.20.1)(typescript@5.7.3))(eslint@9.20.1)(typescript@5.7.3)
       '@rslib/core':
-        specifier: 0.5.0
-        version: 0.5.0(typescript@5.7.3)
+        specifier: 0.5.1
+        version: 0.5.1(typescript@5.7.3)
       '@tsconfig/strictest':
         specifier: 2.0.5
         version: 2.0.5
@@ -623,8 +623,8 @@ packages:
     engines: {node: '>=16.7.0'}
     hasBin: true
 
-  '@rslib/core@0.5.0':
-    resolution: {integrity: sha512-zHgu9GmT/gvbuDoGLxMHxYbKRiARZsH4UXWFsezq7+KZ3PdEMBUNywmslExY/pk+xSpBUF6+peE6WCUOeW3mKQ==}
+  '@rslib/core@0.5.1':
+    resolution: {integrity: sha512-dxJUSrs3pKC4eIkrH1cIWVKRG/LbyluMPt4HVzcaeytow0385AhlJ+vAyXYHLBiU3fI68EASJcvx/IdHIjdYAQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     peerDependencies:
@@ -1630,8 +1630,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rsbuild-plugin-dts@0.5.0:
-    resolution: {integrity: sha512-m9p53zzcKJ+dWJ/sQfI7jaF9UpmQigdMXQm96tvSpnzSp7WQvjTHAyV5iB6H/3lWTcRJXmLb6mxSzIiCVRnNNA==}
+  rsbuild-plugin-dts@0.5.1:
+    resolution: {integrity: sha512-8rlR0vtcp0ewSnxVbBMGNdXqCJ6xFZ/D+BkVWKEaHLZECy36PN3R3V/OfU7ODjJopI2hZkw7Yka/Wpsn2cp64g==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@microsoft/api-extractor': ^7
@@ -2568,10 +2568,10 @@ snapshots:
     transitivePeerDependencies:
       - '@rspack/tracing'
 
-  '@rslib/core@0.5.0(typescript@5.7.3)':
+  '@rslib/core@0.5.1(typescript@5.7.3)':
     dependencies:
       '@rsbuild/core': 1.2.10
-      rsbuild-plugin-dts: 0.5.0(@rsbuild/core@1.2.10)(typescript@5.7.3)
+      rsbuild-plugin-dts: 0.5.1(@rsbuild/core@1.2.10)(typescript@5.7.3)
       tinyglobby: 0.2.12
     optionalDependencies:
       typescript: 5.7.3
@@ -3610,7 +3610,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.34.6
       fsevents: 2.3.3
 
-  rsbuild-plugin-dts@0.5.0(@rsbuild/core@1.2.10)(typescript@5.7.3):
+  rsbuild-plugin-dts@0.5.1(@rsbuild/core@1.2.10)(typescript@5.7.3):
     dependencies:
       '@ast-grep/napi': 0.35.0
       '@rsbuild/core': 1.2.10
