@@ -16,7 +16,7 @@
     "url": "git+https://github.com/praha-inc/error-factory.git"
   },
   "license": "MIT",
-  "author": "PrAha inc.",
+  "author": "PrAha, Inc.",
   "type": "module",
   "exports": {
     "require": {
