@@ -140,6 +140,6 @@ Feel free to check [issues page](https://github.com/praha-inc/error-factory/issu
 
 ## 📝 License
 
-Copyright © [PrAha](https://www.praha-inc.com/).
+Copyright © [PrAha, Inc.](https://www.praha-inc.com/)
 
 This project is [```MIT```](https://github.com/praha-inc/error-factory/blob/main/LICENSE) licensed.
