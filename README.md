@@ -97,7 +97,8 @@ You can define multiple custom error classes and use TypeScript's type narrowing
 class NotFoundError extends ErrorFactory({
   name: 'NotFoundError',
   message: 'Resource not found',
-}) {};
+}) {}
+
 class ValidationError extends ErrorFactory({
   name: 'ValidationError',
   message: 'Invalid input',
