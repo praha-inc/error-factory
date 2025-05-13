@@ -94,18 +94,20 @@ try {
 You can define multiple custom error classes and use TypeScript's type narrowing to handle them effectively based on their name property.
 
 ```ts
-const NotFoundError = ErrorFactory({
+class NotFoundError extends ErrorFactory({
   name: 'NotFoundError',
   message: 'Resource not found',
-});
-const ValidationError = ErrorFactory({
+}) {}
+
+class ValidationError extends ErrorFactory({
   name: 'ValidationError',
   message: 'Invalid input',
-});
-const DatabaseError = ErrorFactory({
+}) {}
+
+class DatabaseError extends ErrorFactory({
   name: 'DatabaseError',
   message: 'A database error occurred',
-});
+}) {}
 
 type ApplicationError = NotFoundError | ValidationError | DatabaseError;
 
