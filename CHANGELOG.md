@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.0.2
+
+### Patch Changes
+
+- [#100](https://github.com/praha-inc/error-factory/pull/100) [`2064b06`](https://github.com/praha-inc/error-factory/commit/2064b06d46a38a861934f39abdfb0f64aee7ca7a) Thanks [@Karibash](https://github.com/Karibash)! - Make it explicitly stated that there are no side effects
+
 ## 1.0.1
 
 ### Patch Changes
