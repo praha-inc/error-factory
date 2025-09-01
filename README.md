@@ -32,10 +32,10 @@ The following demonstrates the most basic usage of ErrorFactory to define and us
 import { ErrorFactory } from '@praha/error-factory';
 
 // Define a custom error
-const NotFoundError = ErrorFactory({
+class NotFoundError extends ErrorFactory({
   name: 'NotFoundError',
   message: 'Resource not found',
-});
+}) {}
 
 // Use the custom error
 try {
@@ -49,10 +49,10 @@ try {
 You can pass additional options to the error constructor, such as cause, which is useful for debugging complex error chains by preserving the original error context.
 
 ```ts
-const DatabaseError = ErrorFactory({
+class DatabaseError extends ErrorFactory({
   name: 'DatabaseError',
   message: 'A database error occurred',
-});
+}) {}
 
 try {
   throw new DatabaseError({ cause: new Error('Connection failed') });
@@ -69,11 +69,11 @@ You can define additional fields directly in the ErrorFactory configuration, pro
 
 ```ts
 // Define an error with custom fields
-const ValidationError = ErrorFactory({
+class QueryError extends ErrorFactory({
   name: 'QueryError',
   message: 'An error occurred while executing a query',
   fields: ErrorFactory.fields<{ query: string; }>(),
-});
+}) {}
 
 try {
   throw new QueryError({
