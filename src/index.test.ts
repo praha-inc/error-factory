@@ -25,7 +25,18 @@ describe('ErrorFactory', () => {
     const cause = new Error('Cause error');
     const error = new TestError({ cause });
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/no-unsafe-member-access
-    expect((error as any)['cause']).toBe(cause);
+    expect(error.cause).toBe(cause);
+  });
+
+  it('should allow for the definition of additional fields', () => {
+    class TestError extends ErrorFactory({
+      name: 'TestError',
+      message: 'Test error',
+      fields: ErrorFactory.fields<{ field: string }>(),
+    }) {}
+
+    const error = new TestError({ field: 'field' });
+
+    expect(error.field).toBe('field');
   });
 });
