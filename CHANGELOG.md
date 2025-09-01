@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.1.0
+
+### Minor Changes
+
+- [#142](https://github.com/praha-inc/error-factory/pull/142) [`4bacf15`](https://github.com/praha-inc/error-factory/commit/4bacf15f09db238bbb57db1488fd99c972b5e0fa) Thanks [@Karibash](https://github.com/Karibash)! - Make it possible to define additional fields
+
 ## 1.0.2
 
 ### Patch Changes
