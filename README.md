@@ -63,24 +63,23 @@ try {
 }
 ```
 
-Customizing errors allows you to provide additional context and improve debugging by attaching relevant information to exceptions.
+#### Advanced Usage: Additional Fields
+
+You can define additional fields directly in the ErrorFactory configuration, providing a more streamlined approach to adding custom properties without extending the class.
 
 ```ts
-// Extending the generated error class for additional functionality
-class QueryError extends ErrorFactory({
+// Define an error with custom fields
+const ValidationError = ErrorFactory({
   name: 'QueryError',
   message: 'An error occurred while executing a query',
-}) {
-  constructor(
-    public readonly query: string,
-    options?: ErrorOptions,
-  ) {
-    super(options);
-  }
-}
+  fields: ErrorFactory.fields<{ query: string; }>(),
+});
 
 try {
-  throw new QueryError('SELECT * FROM users', { cause: new Error('Syntax error') });
+  throw new QueryError({
+    query: 'SELECT * FROM users',
+    cause: new Error('Syntax error'),
+  });
 } catch (error) {
   console.error(error.name); // "QueryError"
   console.error(error.message); // "An error occurred while executing a query"
@@ -89,7 +88,7 @@ try {
 }
 ```
 
-### Advanced Usage: Type Narrowing with Unions
+#### Advanced Usage: Type Narrowing with Unions
 
 You can define multiple custom error classes and use TypeScript's type narrowing to handle them effectively based on their name property.
 
