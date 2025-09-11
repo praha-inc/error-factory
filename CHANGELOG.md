@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.2.0
+
+### Minor Changes
+
+- [#153](https://github.com/praha-inc/error-factory/pull/153) [`4d451e5`](https://github.com/praha-inc/error-factory/commit/4d451e54d603fb59e06eea09513bfc288c98399f) Thanks [@Karibash](https://github.com/Karibash)! - Make the defined additional fields available for use in error messages
+
 ## 1.1.0
 
 ### Minor Changes
