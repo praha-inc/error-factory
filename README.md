@@ -88,6 +88,31 @@ try {
 }
 ```
 
+#### Advanced Usage: Dynamic Message Generation
+
+You can define the message as a function that receives the custom fields as parameters, allowing for dynamic and contextual error messages based on the provided data.
+
+```ts
+// Define an error with dynamic message generation
+class ValidationError extends ErrorFactory({
+  name: 'ValidationError',
+  message: ({ field, value }) => `Validation failed for field '${field}' with value '${value}'`,
+  fields: ErrorFactory.fields<{ field: string; value: unknown; }>(),
+}) {}
+
+try {
+  throw new ValidationError({
+    field: 'email',
+    value: 'invalid-email',
+  });
+} catch (error) {
+  console.error(error.name); // "ValidationError"
+  console.error(error.message); // "Validation failed for field 'email' with value 'invalid-email'"
+}
+```
+
+This approach is particularly useful when you need error messages that include specific details about what went wrong, making debugging and error reporting more informative.
+
 #### Advanced Usage: Type Narrowing with Unions
 
 You can define multiple custom error classes and use TypeScript's type narrowing to handle them effectively based on their name property.
