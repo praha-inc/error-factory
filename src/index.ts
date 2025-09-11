@@ -6,15 +6,23 @@ type HasRequired<T> = {
 
 type ErrorFields = DisallowKeys<keyof Error> & Record<string, unknown>;
 
+type ErrorInstance<
+  Name extends string,
+  Message extends string,
+  Fields extends ErrorFields,
+> = ErrorFields extends Fields
+  ? Error & Readonly<{ name: Name; message: Message }>
+  : Error & Readonly<{ name: Name; message: Message }> & Readonly<Fields>;
+
 type ErrorConstructor<
   Name extends string,
   Message extends string,
   Fields extends ErrorFields,
 > = ErrorFields extends Fields
-  ? new(options?: ErrorOptions) => Error & Readonly<{ name: Name; message: Message }>
+  ? (new(options?: ErrorOptions) => ErrorInstance<Name, Message, Fields>) & { name: Name }
   : HasRequired<Fields> extends true
-    ? new(options: ErrorOptions & Fields) => Error & Readonly<{ name: Name; message: Message }> & Readonly<Fields>
-    : new(options?: ErrorOptions & Fields) => Error & Readonly<{ name: Name; message: Message }> & Readonly<Fields>;
+    ? (new(options: ErrorOptions & Fields) => ErrorInstance<Name, Message, Fields>) & { name: Name }
+    : (new(options?: ErrorOptions & Fields) => ErrorInstance<Name, Message, Fields>) & { name: Name };
 
 const ErrorFactory = <
   Name extends string,
@@ -22,16 +30,16 @@ const ErrorFactory = <
   Fields extends ErrorFields,
 >(props: {
   name: Name;
-  message: Message;
+  message: Message | ((fields: Fields) => Message);
   fields?: Fields;
 }): ErrorConstructor<Name, Message, Fields> => {
   abstract class Class extends Error {
+    public static override readonly name = props.name;
     public override readonly name = props.name;
-    public static readonly message = props.message;
 
     protected constructor(options?: ErrorOptions & Fields) {
       const { cause, ...fields } = options ?? {};
-      super(props.message, { cause });
+      super(typeof props.message === 'function' ? props.message(fields as Fields) : props.message, { cause });
       Object.assign(this, fields);
     }
   }
