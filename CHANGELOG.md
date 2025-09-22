@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.2.1
+
+### Patch Changes
+
+- [#162](https://github.com/praha-inc/error-factory/pull/162) [`656b396`](https://github.com/praha-inc/error-factory/commit/656b3964d7bb9ebd1f1f9beb006459349ab0a470) Thanks [@Karibash](https://github.com/Karibash)! - Add file extensions to import paths in TypeScript declaration files
+
 ## 1.2.0
 
 ### Minor Changes
