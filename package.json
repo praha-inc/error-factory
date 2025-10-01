@@ -60,7 +60,7 @@
     "@tsconfig/strictest": "2.0.6",
     "eslint": "9.36.0",
     "pkg-pr-new": "0.0.60",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "vitest": "3.2.4"
   },
   "packageManager": "pnpm@10.17.1",
