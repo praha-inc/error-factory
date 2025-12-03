@@ -59,7 +59,7 @@
     "@rslib/core": "0.18.2",
     "@tsconfig/strictest": "2.0.8",
     "eslint": "9.39.1",
-    "pkg-pr-new": "0.0.60",
+    "pkg-pr-new": "0.0.61",
     "typescript": "5.9.3",
     "vitest": "3.2.4"
   },
