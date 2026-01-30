@@ -61,7 +61,7 @@
     "eslint": "9.39.2",
     "pkg-pr-new": "0.0.62",
     "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "vitest": "4.0.18"
   },
   "packageManager": "pnpm@10.28.2",
   "publishConfig": {
