@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.3.1
+
+### Patch Changes
+
+- [#237](https://github.com/praha-inc/error-factory/pull/237) [`a3b101b`](https://github.com/praha-inc/error-factory/commit/a3b101bb55f72258beb986e247d3755a92e9fdb3) Thanks [@Karibash](https://github.com/Karibash)! - Add an explanation about preset errors to README.md
+
 ## 1.3.0
 
 ### Minor Changes
