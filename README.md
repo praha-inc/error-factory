@@ -158,6 +158,58 @@ try {
 }
 ```
 
+#### Built-in Presets
+
+`@praha/error-factory` provides built-in error classes for common use cases.
+These presets are ready to use out of the box and follow the same patterns as custom errors created with ErrorFactory.
+
+##### UnexpectedError
+
+A general-purpose error for handling unexpected situations in your application.
+
+```ts
+import { UnexpectedError } from '@praha/error-factory/presets';
+
+try {
+  throw new UnexpectedError();
+} catch (error) {
+  console.error(error.name); // "UnexpectedError"
+  console.error(error.message); // "An unexpected error has occurred"
+}
+
+// You can also pass a cause
+try {
+  throw new UnexpectedError({ cause: new Error('Original error') });
+} catch (error) {
+  console.error(error.cause); // Error: Original error
+}
+```
+
+##### UnreachableError
+
+An error for marking code paths that should never be reached.
+This is particularly useful with TypeScript's exhaustive type checking.
+
+```ts
+import { UnreachableError } from '@praha/error-factory/presets';
+
+type Status = 'pending' | 'success' | 'error';
+
+const handleStatus = (status: Status) => {
+  switch (status) {
+    case 'pending':
+      return 'Processing...';
+    case 'success':
+      return 'Completed';
+    case 'error':
+      return 'Failed';
+    default:
+      // TypeScript ensures all cases are handled
+      throw new UnreachableError();
+  }
+};
+```
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.
