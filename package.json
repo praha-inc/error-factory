@@ -75,7 +75,7 @@
     "typescript": "5.9.3",
     "vitest": "4.0.18"
   },
-  "packageManager": "pnpm@10.29.1",
+  "packageManager": "pnpm@10.29.2",
   "publishConfig": {
     "provenance": true
   }
