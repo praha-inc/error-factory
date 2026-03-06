@@ -25,6 +25,24 @@ describe('ErrorFactory', () => {
     expect(error.message).toBe('Test error');
   });
 
+  it('should set the correct name on the created error class even if the name is not explicitly specified', () => {
+    class TestError extends ErrorFactory({
+      message: 'Test error',
+    }) {}
+
+    expect(TestError.name).toBe('TestError');
+  });
+
+  it('should set the correct name on the created error instance even if the name is not explicitly specified', () => {
+    class TestError extends ErrorFactory({
+      message: 'Test error',
+    }) {}
+
+    const error = new TestError();
+
+    expect(error.name).toBe('TestError');
+  });
+
   it('Should be possible to pass a cause option to the created error class', () => {
     class TestError extends ErrorFactory({ name: 'TestError', message: 'Test error' }) {}
 

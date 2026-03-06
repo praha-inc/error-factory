@@ -63,6 +63,26 @@ try {
 }
 ```
 
+#### Advanced Usage: Omitting the name
+
+You can omit the `name` option. In that case, `new.target.name` (i.e. the class name) is automatically used at runtime.
+
+```ts
+class NotFoundError extends ErrorFactory({
+  message: 'Resource not found',
+}) {}
+
+try {
+  throw new NotFoundError();
+} catch (error) {
+  console.error(error.name); // "NotFoundError"
+}
+```
+
+> [!NOTE]
+> When `name` is omitted, the type of `name` is inferred as `string` rather than a string literal type. This means type narrowing via the `name` property (e.g. `switch (error.name)`) is not available. If you need type narrowing, specify `name` explicitly or use `instanceof` instead.
+
+
 #### Advanced Usage: Additional Fields
 
 You can define additional fields directly in the ErrorFactory configuration, providing a more streamlined approach to adding custom properties without extending the class.
