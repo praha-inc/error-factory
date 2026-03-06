@@ -1,5 +1,15 @@
 # @praha/error-factory
 
+## 1.4.0
+
+### Minor Changes
+
+- [#257](https://github.com/praha-inc/error-factory/pull/257) [`b71ae82`](https://github.com/praha-inc/error-factory/commit/b71ae82e86e4f249d8c25cc22ad4ad859900d7fd) Thanks [@Karibash](https://github.com/Karibash)! - Make the name property optional
+
+### Patch Changes
+
+- [#259](https://github.com/praha-inc/error-factory/pull/259) [`4530092`](https://github.com/praha-inc/error-factory/commit/4530092e7d3556a51208d614a3116e6ef2e5bb83) Thanks [@Karibash](https://github.com/Karibash)! - Add a tsdoc
+
 ## 1.3.1
 
 ### Patch Changes
