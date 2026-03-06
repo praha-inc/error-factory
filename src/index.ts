@@ -25,21 +25,21 @@ type ErrorConstructor<
     : (new(options?: ErrorOptions & Fields) => ErrorInstance<Name, Message, Fields>) & { name: Name };
 
 const ErrorFactory = <
-  Name extends string,
-  Message extends string,
-  Fields extends ErrorFields,
+  Name extends string = string,
+  Message extends string = string,
+  Fields extends ErrorFields = ErrorFields,
 >(props: {
-  name: Name;
+  name?: Name;
   message: Message | ((fields: Fields) => Message);
   fields?: Fields;
 }): ErrorConstructor<Name, Message, Fields> => {
   abstract class Class extends Error {
-    public static override readonly name = props.name;
-    public override readonly name = props.name;
+    public override readonly name: string;
 
     protected constructor(options?: ErrorOptions & Fields) {
       const { cause, ...fields } = options ?? {};
       super(typeof props.message === 'function' ? props.message(fields as Fields) : props.message, { cause });
+      this.name = props.name ?? new.target.name;
       Object.assign(this, fields);
     }
   }
