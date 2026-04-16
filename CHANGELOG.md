@@ -1,5 +1,11 @@
 # @praha/error-factory
 
+## 1.4.1
+
+### Patch Changes
+
+- [#291](https://github.com/praha-inc/error-factory/pull/291) [`8de64cf`](https://github.com/praha-inc/error-factory/commit/8de64cf73d586dfe3c67027e859c02f6861f556a) Thanks [@Karibash](https://github.com/Karibash)! - Add optional reason field to UnreachableError
+
 ## 1.4.0
 
 ### Minor Changes
