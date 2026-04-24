@@ -19,7 +19,7 @@ importers:
         version: 1.0.0-beta.5(eslint@10.2.1)(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))
       '@rslib/core':
         specifier: 0.21.2
-        version: 0.21.2(typescript@5.9.3)
+        version: 0.21.2(typescript@6.0.3)
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -33,8 +33,8 @@ importers:
         specifier: 0.0.66
         version: 0.0.66
       typescript:
-        specifier: 5.9.3
-        version: 5.9.3
+        specifier: 6.0.3
+        version: 6.0.3
       vitest:
         specifier: 4.1.4
         version: 4.1.4(vite@8.0.8)
@@ -1749,8 +1749,8 @@ packages:
     resolution: {integrity: sha512-Acylog8/luQ8L7il+geoSxhEkazvkslg7PSNKOX59mbB9cOveP5aq9h74Y7YU8yDpJwetzQQrfIwtf4Wp4LKcw==}
     engines: {node: '>=4'}
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2490,12 +2490,12 @@ snapshots:
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rslib/core@0.21.2(typescript@5.9.3)':
+  '@rslib/core@0.21.2(typescript@6.0.3)':
     dependencies:
       '@rsbuild/core': 2.0.0-rc.3
-      rsbuild-plugin-dts: 0.21.2(@rsbuild/core@2.0.0-rc.3)(typescript@5.9.3)
+      rsbuild-plugin-dts: 0.21.2(@rsbuild/core@2.0.0-rc.3)(typescript@6.0.3)
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.3
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
       - '@typescript/native-preview'
@@ -3382,12 +3382,12 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.0.0-rc.15
       '@rolldown/binding-win32-x64-msvc': 1.0.0-rc.15
 
-  rsbuild-plugin-dts@0.21.2(@rsbuild/core@2.0.0-rc.3)(typescript@5.9.3):
+  rsbuild-plugin-dts@0.21.2(@rsbuild/core@2.0.0-rc.3)(typescript@6.0.3):
     dependencies:
       '@ast-grep/napi': 0.37.0
       '@rsbuild/core': 2.0.0-rc.3
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.3
 
   run-parallel@1.2.0:
     dependencies:
@@ -3465,7 +3465,7 @@ snapshots:
 
   type-detect@4.1.0: {}
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   ufo@1.6.3: {}
 
