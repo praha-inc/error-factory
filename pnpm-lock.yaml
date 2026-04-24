@@ -15,8 +15,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0
       '@praha/oxlint-config-standard':
-        specifier: 1.0.0-beta.4
-        version: 1.0.0-beta.4(eslint@10.2.1)(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))
+        specifier: 1.0.0-beta.5
+        version: 1.0.0-beta.5(eslint@10.2.1)(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))
       '@rslib/core':
         specifier: 0.21.2
         version: 0.21.2(typescript@5.9.3)
@@ -512,14 +512,14 @@ packages:
   '@package-json/types@0.0.12':
     resolution: {integrity: sha512-uu43FGU34B5VM9mCNjXCwLaGHYjXdNincqKLaraaCW+7S2+SmiBg1Nv8bPnmschrIfZmfKNY9f3fC376MRrObw==}
 
-  '@praha/oxlint-config-internal@1.0.0-beta.4':
-    resolution: {integrity: sha512-7ppKJ3DxfJJu/nXWkSnWVbif2xCq8zEqnNdu505nXUH6yAaPtN3sPE62opnDfoIWrlEmE/DwAn05S+KBnUC7lw==}
+  '@praha/oxlint-config-internal@1.0.0-beta.5':
+    resolution: {integrity: sha512-NlYPYjBI324uhOIULhSIDRv6i4D0QUeyyx2sE6aeji3PVwrSicEx3SXApEiMYqHFVevJz+7E8xOMPfSz0ZRYbw==}
     peerDependencies:
       oxlint: ^1.0.0
       oxlint-tsgolint: '>=0.20.0'
 
-  '@praha/oxlint-config-standard@1.0.0-beta.4':
-    resolution: {integrity: sha512-t9Mmc+uGpbd/dLABpyCgRLn/oZ1xPyO7gjc++YxhoVyLCJHvkeos7AuXbRofCzpGRR5U9BfndAX8Ijwl9+YiBQ==}
+  '@praha/oxlint-config-standard@1.0.0-beta.5':
+    resolution: {integrity: sha512-f+xELmVVniZcyzAWjeyB8Xoqd59hcgl4ka9NPWsyix7jF6Lvd9GpJ4JQhizKo4BVRj0JftgvHcR+PllIyXAX9Q==}
     peerDependencies:
       oxlint: ^1.0.0
       oxlint-tsgolint: '>=0.20.0'
@@ -2412,14 +2412,14 @@ snapshots:
 
   '@package-json/types@0.0.12': {}
 
-  '@praha/oxlint-config-internal@1.0.0-beta.4(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))':
+  '@praha/oxlint-config-internal@1.0.0-beta.5(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))':
     dependencies:
       oxlint: 1.61.0(oxlint-tsgolint@0.21.1)
       oxlint-tsgolint: 0.21.1
 
-  '@praha/oxlint-config-standard@1.0.0-beta.4(eslint@10.2.1)(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))':
+  '@praha/oxlint-config-standard@1.0.0-beta.5(eslint@10.2.1)(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))':
     dependencies:
-      '@praha/oxlint-config-internal': 1.0.0-beta.4(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))
+      '@praha/oxlint-config-internal': 1.0.0-beta.5(oxlint-tsgolint@0.21.1)(oxlint@1.61.0(oxlint-tsgolint@0.21.1))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.2.1)
       eslint-plugin-import-x: 4.16.2(eslint@10.2.1)
       eslint-plugin-unicorn: 63.0.0(eslint@10.2.1)
