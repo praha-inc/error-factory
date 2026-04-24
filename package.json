@@ -66,7 +66,7 @@
     "@praha/oxlint-config-standard": "1.0.0-beta.4",
     "@rslib/core": "0.21.2",
     "@tsconfig/strictest": "2.0.8",
-    "oxlint": "1.60.0",
+    "oxlint": "1.61.0",
     "oxlint-tsgolint": "0.21.1",
     "pkg-pr-new": "0.0.66",
     "typescript": "5.9.3",
