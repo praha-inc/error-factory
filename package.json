@@ -64,7 +64,7 @@
     "@changesets/changelog-github": "0.7.0",
     "@changesets/cli": "2.31.0",
     "@praha/oxlint-config-standard": "1.0.0-beta.5",
-    "@rslib/core": "0.21.4",
+    "@rslib/core": "0.21.5",
     "@tsconfig/strictest": "2.0.8",
     "oxlint": "1.64.0",
     "oxlint-tsgolint": "0.22.1",
