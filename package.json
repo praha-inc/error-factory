@@ -68,7 +68,7 @@
     "@tsconfig/strictest": "2.0.8",
     "oxlint": "1.64.0",
     "oxlint-tsgolint": "0.22.1",
-    "pkg-pr-new": "0.0.72",
+    "pkg-pr-new": "0.0.73",
     "typescript": "5.9.3",
     "vitest": "4.1.6"
   },
