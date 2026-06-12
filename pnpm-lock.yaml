@@ -15,8 +15,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0
       '@praha/oxlint-config-standard':
-        specifier: 1.0.0-beta.6
-        version: 1.0.0-beta.6(eslint@10.4.1)(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))
+        specifier: 1.0.0-beta.7
+        version: 1.0.0-beta.7(@praha/byethrow@0.12.0(typescript@5.9.3))(eslint@10.4.1)(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))
       '@rslib/core':
         specifier: 0.22.0
         version: 0.22.0(typescript@5.9.3)
@@ -422,17 +422,32 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@oxlint/plugins@1.69.0':
+    resolution: {integrity: sha512-4MLUf2a9ai9EymFvcIBvaCkHJkvOA/WHmPhzrTu0cRBYpaaMBxmwwjGTOYdBC149XAwtaL7eaCnojkqxdMvuKg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
   '@package-json/types@0.0.12':
     resolution: {integrity: sha512-uu43FGU34B5VM9mCNjXCwLaGHYjXdNincqKLaraaCW+7S2+SmiBg1Nv8bPnmschrIfZmfKNY9f3fC376MRrObw==}
 
-  '@praha/oxlint-config-internal@1.0.0-beta.6':
-    resolution: {integrity: sha512-AMFrzjaLpEyeu+/n2YmszO+4IFZKUO8otG4Gitifd9ZBVjx9DKIOiv8a1CgrX091qbdy7ScUOzVfLDd0U1H+tg==}
+  '@praha/byethrow-oxlint@0.12.0':
+    resolution: {integrity: sha512-zdg/oa50/N+a62FsCVHz/J+9RnuaIWZVzwo9frIXZdyPuNNHRYBCee9AwCnfYinOQ6dLOzFmOS9lATnw/MDGdQ==}
+    peerDependencies:
+      '@praha/byethrow': 0.12.0
+      oxlint: ^1.0.0
+
+  '@praha/byethrow@0.12.0':
+    resolution: {integrity: sha512-Q3dRHW8aGqYbEe/W5YKrik6GbtfLGdCrCVcDcP/YJe4uhhbbrkEw9XoRuPZhfMb4uLrUXk27h4phK3I8+cAdRw==}
+    peerDependencies:
+      typescript: '>=5.0.0'
+
+  '@praha/oxlint-config-internal@1.0.0-beta.7':
+    resolution: {integrity: sha512-qjjAldizWDSRcxdawA9zlpQpOXBraJK65HDtdpBdowgppRE9wgxQoOGYWFX46HKI4hyglf2RqMioP8GeRf6+Vw==}
     peerDependencies:
       oxlint: ^1.0.0
       oxlint-tsgolint: '>=0.20.0'
 
-  '@praha/oxlint-config-standard@1.0.0-beta.6':
-    resolution: {integrity: sha512-a+iHql2ozHPBfPnTIhLEmJG7Z1QhSqo83oRtIFXNm9eFLGPhT0OodxLjsqN1WdM001NIdZWj1rnV8EYS3f9zHQ==}
+  '@praha/oxlint-config-standard@1.0.0-beta.7':
+    resolution: {integrity: sha512-CbaSU8m2xooxf/aov0kbAaZuD/0wJXCnla1dO6ZUNOPYnogpfo3tyb92uJ7rw/uekDwKhkz6rXDzSH2TrrZp4g==}
     peerDependencies:
       oxlint: ^1.0.0
       oxlint-tsgolint: '>=0.20.0'
@@ -2132,16 +2147,30 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.69.0':
     optional: true
 
+  '@oxlint/plugins@1.69.0': {}
+
   '@package-json/types@0.0.12': {}
 
-  '@praha/oxlint-config-internal@1.0.0-beta.6(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))':
+  '@praha/byethrow-oxlint@0.12.0(@praha/byethrow@0.12.0(typescript@5.9.3))(oxlint@1.69.0(oxlint-tsgolint@0.23.0))':
+    dependencies:
+      '@oxlint/plugins': 1.69.0
+      '@praha/byethrow': 0.12.0(typescript@5.9.3)
+      oxlint: 1.69.0(oxlint-tsgolint@0.23.0)
+
+  '@praha/byethrow@0.12.0(typescript@5.9.3)':
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      typescript: 5.9.3
+
+  '@praha/oxlint-config-internal@1.0.0-beta.7(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))':
     dependencies:
       oxlint: 1.69.0(oxlint-tsgolint@0.23.0)
       oxlint-tsgolint: 0.23.0
 
-  '@praha/oxlint-config-standard@1.0.0-beta.6(eslint@10.4.1)(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))':
+  '@praha/oxlint-config-standard@1.0.0-beta.7(@praha/byethrow@0.12.0(typescript@5.9.3))(eslint@10.4.1)(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))':
     dependencies:
-      '@praha/oxlint-config-internal': 1.0.0-beta.6(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))
+      '@praha/byethrow-oxlint': 0.12.0(@praha/byethrow@0.12.0(typescript@5.9.3))(oxlint@1.69.0(oxlint-tsgolint@0.23.0))
+      '@praha/oxlint-config-internal': 1.0.0-beta.7(oxlint-tsgolint@0.23.0)(oxlint@1.69.0(oxlint-tsgolint@0.23.0))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.4.1)
       eslint-plugin-import-x: 4.16.2(eslint@10.4.1)
       eslint-plugin-unicorn: 64.0.0(eslint@10.4.1)
@@ -2149,6 +2178,7 @@ snapshots:
       oxlint: 1.69.0(oxlint-tsgolint@0.23.0)
       oxlint-tsgolint: 0.23.0
     transitivePeerDependencies:
+      - '@praha/byethrow'
       - '@typescript-eslint/utils'
       - eslint
       - eslint-import-resolver-node
