@@ -69,7 +69,7 @@
     "oxlint": "1.74.0",
     "oxlint-tsgolint": "0.25.0",
     "pkg-pr-new": "0.0.79",
-    "typescript": "5.9.3",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "packageManager": "pnpm@10.34.5",
